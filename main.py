@@ -16,7 +16,7 @@ def main():
 def load_games(max_p=5,page_size=40):
     games = []
     for page in range(1, max_p+1):
-        url = f"https://api.rawg.io/api/games?key=8f7fb95a71aa48499feea26587ed647a&page={page}&page_size={page_size}"
+        url = f"https://api.rawg.io/api/games?key="replace_with_your_api_key"&page={page}&page_size={page_size}"
         response = requests.get(url)
         response.raise_for_status()
         data = response.json()["results"]
